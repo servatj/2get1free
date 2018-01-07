@@ -26,6 +26,11 @@ describe('buy 2 get 1 free maxDiscount', () => {
     expect(maxDiscount).to.equal(30);
   });
 
+  it('returns 20 for [15,20,30,30,15,20]', () => {
+    const maxDiscount = discount.getMaxDiscount([15,20,30,30,15,20]);
+    expect(maxDiscount).to.equal(20);
+  });
+
   it('returns 10 for [10,30,45]', () => {
     const maxDiscount = discount.getMaxDiscount([10,30,45]);
     expect(maxDiscount).to.equal(10);
