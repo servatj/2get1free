@@ -10,8 +10,8 @@ const getMaxDiscount = (arr) => {
     return totalDiscount
   }
   const res = arr.reduce((curr, val, i) => {
-    const temp = Math.min(...arr.slice(i, 3 + i))
-      if (i < getGroups(arr)) return curr[0] > temp ? curr : [ temp, i ]
+    const value = Math.min(...arr.slice(i, 3 + i))
+      if (i < getGroups(arr)) return curr[0] > value ? curr : [ value, i ]
       return curr
   }, [], arr)
   left = arr.slice(0, res[1]).length >= 3 ? arr.slice(0, res[1]) : []
