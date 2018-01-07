@@ -1,0 +1,29 @@
+You're running a "Buy 2, Get 1 Free" promotion at your store. Your customers can group any 3 consecutive items in their shopping cart, and the cheapest item from every such group of 3 items will be free.
+
+Given a list of prices, your task is to maximize the discount your customer can get.
+
+Example
+
+For prices = [10, 20, 17, 7, 16, 19, 16], the output should be
+maxDiscount(prices) = 26.
+
+The customer can group their items as follows: (10, 20, 17), 7, (16,19,16). Thus, they can get a $10 discount from the first group and a $16 discount from the second group, for a total discount of $26.
+
+For prices = [1, 2, 7, 8, 10, 2], the output should be
+maxDiscount(prices) = 7.
+
+The customer can group their items as follows: 1, 2, (7, 8, 10), 2. Thus, they can get a $7 discount.
+
+Input/Output
+
+[input] array.integer prices
+
+An array of integers that represents the prices of each item in the customer's cart.
+
+Guaranteed constraints:
+3 ≤ prices.length ≤ 2000,
+1 ≤ prices[i] ≤ 1000.
+
+[output] integer
+
+The maximum discount the customer can receive, given the rules above.
